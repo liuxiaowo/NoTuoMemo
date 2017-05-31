@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:id="@+id/add_text"
+  android:background="#ffffff">
+ <!-- 顶层功能栏 -->
+<RelativeLayout
+    android:id="@+id/add_text_top"
+	 android:layout_width="match_parent"
+  	 android:layout_height="45dp"
+  	 android:background="#700C8485"
+  	 android:layout_marginTop="1dp"
+  	 android:layout_alignParentTop="true"
+  	 >
+  	 <!--主页按钮 -->
+  	 <ImageButton
+  	 		android:id="@+id/add_text_tuo"
+  			android:layout_width="40dp"
+  	 		android:layout_height="40dp"
+  	 		android:layout_centerVertical="true"
+  	 		android:layout_alignParentLeft="true"
+  	 		android:layout_marginTop="3dp"
+  	 		android:layout_marginLeft="5dp"
+  	 		android:background="@drawable/tuo"/>
+
+  <!-- 备忘录&极简切换按钮 -->
+   <LinearLayout
+	 android:layout_width="wrap_content"
+  	 android:layout_height="45dp"
+  	 android:layout_alignParentTop="true"
+  	 android:orientation="horizontal"
+  	 android:layout_centerHorizontal="true">
+  	 <!-- 备忘录  亮 -->
+  	  <ImageButton
+  	  		android:id="@+id/add_text_memo"
+  			android:layout_width="wrap_content"
+  	 		android:layout_height="wrap_content"
+  	 		android:layout_weight="1"
+  	 		android:layout_gravity="center_vertical"
+  	 		android:background="@drawable/memo_bright"
+  	 		/>
+  	 	<!-- 极简  暗 -->
+  	 	<ImageButton
+  	  		android:id="@+id/add_text_text"
+  			android:layout_width="wrap_content"
+  	 		android:layout_height="wrap_content"
+  	 		android:layout_weight="1"
+  	 		android:layout_gravity="center_vertical"
+  	 		android:background="@drawable/minimalist_dark"
+  	 		/>
+	</LinearLayout>
+<!--下拉按钮  -->
+  	 <ImageButton
+  	   		android:id="@+id/add_text_down"
+  			android:layout_width="wrap_content"
+  	 		android:layout_height="wrap_content"
+  	 		android:layout_marginRight="5dp"
+  	 		android:layout_marginTop="3dp"
+  	 		android:layout_centerVertical="true"
+  	 		android:layout_alignParentRight="true"
+  	 		android:background="@drawable/down"/>	 
+  	 	
+</RelativeLayout>
+		<!-- 标题输入框 -->
+		<EditText
+  	 		android:id="@+id/add_text_title"
+  	 		android:layout_width="match_parent"
+  	 		android:layout_height="wrap_content"
+  	 		android:layout_marginTop="46dp"
+  	 		android:hint="请输入标题"
+  	 		android:maxLines="2"
+  	 		android:gravity="center_horizontal"
+  	 		android:bufferType="editable"
+  	 	/>
+  	 	<!-- 内容输入框 -->
+  	 	<EditText
+  	 		android:id="@+id/add_text_content"
+  	 		android:layout_width="match_parent"
+  	 		android:layout_height="match_parent"
+  	 		android:layout_below="@id/add_text_title"
+  	 		android:layout_marginTop="5dp"
+  	 		android:hint="请输入内容"
+  	 		android:gravity="top"
+  	 	/>
+</RelativeLayout>

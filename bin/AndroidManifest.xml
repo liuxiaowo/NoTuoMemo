@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.memo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 替换系统锁屏要调用KeyguardManager类相应方法去解除屏幕锁定 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- 广播接收权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 禁止下拉状态栏 -->
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <!-- 电量 -->
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <!-- shark -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 屏蔽home -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- 联网权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 录音权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- photo -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:name="com.example.memo.MemoApplication" 
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.memo.WelcomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.memo.AddTextActivity"
+            android:label="@string/title_activity_add_text" >
+        </activity>
+        <activity
+            android:name="com.example.memo.ListMemoActivity"
+            android:label="@string/title_activity_list_memo" >
+        </activity>
+        <activity
+            android:name="com.example.memo.ListTextActivity"
+            android:label="@string/title_activity_list_text" >
+        </activity>
+        <activity
+            android:name="com.example.memo.MemoAddOneActivity"
+            android:label="@string/title_activity_memo_add_one" >
+        </activity>
+        <activity
+            android:name="com.example.memo.MemoAddTwoActivity"
+            android:label="@string/title_activity_memo_add_two" >
+        </activity>
+        <activity
+            android:name="com.example.memo.MemoAddThreeActivity"
+            android:label="@string/title_activity_memo_add_three" >
+        </activity>
+
+        <service android:name="com.example.service.SharedService" >
+        </service>
+        <service android:name="com.example.service.LockService" >
+        </service>
+
+        <activity
+            android:name="com.example.memo.InstructionActivity"
+            android:label="@string/title_activity_instruction" >
+        </activity>
+        <activity android:name="com.example.memo.AddMemoActivity" >
+        </activity>
+        <activity
+            android:name="com.example.memo.CollectShelfActivity"
+            android:label="@string/title_activity_collect_shelf" >
+        </activity>
+        <activity
+            android:name="com.example.memo.FinishAssigmentActivity"
+            android:label="@string/title_activity_finish_assigment" >
+        </activity>
+        <activity
+            android:name="com.example.memo.LockActivity"
+            android:label="@string/title_activity_lock" >
+        </activity>
+        <activity
+            android:name="com.example.memo.RewardActivity"
+            android:label="@string/title_activity_reward" >
+        </activity>
+
+        <receiver android:name="com.example.memo.BroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.example.memo.TaskActivity"
+            android:label="@string/title_activity_task" >
+        </activity>
+        <activity
+            android:name="com.example.memo.ShowMemoActivity"
+            android:label="@string/title_activity_show_memo" >
+        </activity>
+        <activity
+            android:name="com.example.memo.ShowTextActivity"
+            android:label="@string/title_activity_show_text" >
+        </activity>
+        <activity
+            android:name="com.example.memo.ShowCardActivity"
+            android:label="@string/title_activity_show_card" >
+        </activity>
+        <activity
+            android:name="com.example.memo.MultiImageSelectorActivity"
+            android:label="@string/title_activity_multi_image_selector" >
+        </activity>
+        <activity
+            android:name="com.example.memo.PreViewActivity"
+            android:label="@string/title_activity_pre_view" >
+        </activity>
+    </application>
+
+</manifest>

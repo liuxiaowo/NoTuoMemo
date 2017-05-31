@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+     <RelativeLayout
+        android:id="@+id/ll_popup"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:padding="10dp"
+        android:background="@drawable/recording_background"
+        android:layout_centerHorizontal="true">
+    <!--正在录音文字  -->
+    <ImageView
+  	 android:id="@+id/recording_word"
+  	 android:layout_width="wrap_content"
+  	 android:layout_height="wrap_content"
+  	 android:src="@drawable/recording_word"
+  	 android:layout_centerHorizontal="true"
+  	 android:layout_alignParentTop="true"
+  	 android:background="#00000000"/>
+  	 <!-- 中间层 -->
+
+	<!-- 录音图案 -->
+  	<ImageView
+  	        android:id="@+id/recording"
+  	        android:layout_width="wrap_content"
+  	        android:layout_height="wrap_content"
+  	        android:layout_below="@id/recording_word"
+  	        android:layout_marginLeft="39dp"
+  	        android:background="#00000000"
+  	        android:src="@drawable/recording" />
+  	
+  	<TextView 
+  	    android:id="@+id/recording_time"
+  	    android:layout_height="wrap_content"
+  	    android:layout_width="wrap_content"
+  	    android:textColor="#ffffff"
+  	    android:textSize="30sp"
+  	    android:text="00:00"
+  	    android:layout_centerVertical="true"
+  	    android:layout_toRightOf="@id/recording"
+  	    android:layout_marginLeft="20dp"/>
+  	    
+  	<!-- 完成按钮 -->
+  	<ImageButton
+  	        android:id="@+id/recording_finish"
+  	        android:layout_width="wrap_content"
+  	        android:layout_height="wrap_content"
+  	        android:layout_below="@id/recording"
+  	        android:layout_centerHorizontal="true"
+  	        android:layout_marginTop="10dp"
+  	        android:background="@drawable/recording_finish" />
+
+
+  	 </RelativeLayout>
+</RelativeLayout>

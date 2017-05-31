@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/accessory"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="#70FFFFFF" >
+    <!-- 插图 -->
+     <TextView 
+        android:id="@+id/accessory_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="插图"
+        android:textSize="20sp"
+        android:textColor="#6a6a6a"/>
+	 <View
+	     android:id="@+id/accessory_line1"
+ 		 android:layout_width="match_parent"
+		 android:layout_height="2dp"
+		 android:background="#6a6a6a"
+		 android:layout_below="@id/accessory_pic"/>
+	  <LinearLayout
+    android:id="@+id/accessory_add_photo"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="5dp"
+    android:layout_below="@id/accessory_line1">
+    <Button
+        android:id="@+id/accessory_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/add_photo"
+         />  
+     <com.example.adapter.HorizontalListView   
+        android:id="@+id/accessory_listView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="5dp">
+     </com.example.adapter.HorizontalListView>
+</LinearLayout>
+
+	 <View
+	     android:id="@+id/accessory_line2"
+ 		 android:layout_width="fill_parent"
+		 android:layout_height="2dp"
+		 android:background="#6a6a6a"
+		 android:layout_marginTop="5dp"
+		 android:layout_below="@id/accessory_add_photo"/>
+	
+
+	<!-- 录音 -->
+	 <TextView 
+        android:id="@+id/accessory_voice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/accessory_line2"
+        android:layout_marginLeft="5dp"
+        android:text="录音"
+        android:textSize="20sp"
+        android:textColor="#6a6a6a"/>
+	  <View
+	     android:id="@+id/accessory_line3"
+ 		 android:layout_width="fill_parent"
+		 android:layout_height="2dp"
+		 android:background="#6a6a6a"
+		 android:layout_marginTop="5dp"
+		 android:layout_below="@id/accessory_voice"/>
+
+      
+      <RelativeLayout 
+          android:id="@+id/player"
+          android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+          android:layout_below="@id/accessory_line3"
+          android:layout_marginTop="5dp"
+          android:padding="5dp"
+          android:background="#60B6DECE">
+          <SeekBar
+	      android:id="@+id/seekbar"
+	      android:layout_width="match_parent"
+	      android:layout_height="wrap_content"
+	      android:max="100"
+	      android:maxHeight="2dip"
+	      android:minHeight="2dip"
+	      android:progress="20"
+	      android:progressDrawable="@drawable/seekbar"
+	      android:secondaryProgress="100"
+	      android:thumb="@drawable/thumb" />
+           <TextView 
+	          android:id="@+id/time_current"
+	          android:layout_height="wrap_content"
+	          android:layout_width="wrap_content"
+	          android:layout_below="@id/seekbar"
+	          android:layout_marginTop="5dp"
+	          android:layout_alignParentLeft="true"
+	          android:textColor="#6a6a6a"
+	          android:text="00:00"/>
+	      <TextView 
+	          android:id="@+id/time_total"
+	          android:layout_height="wrap_content"
+	          android:layout_width="wrap_content"
+	          android:layout_alignTop="@id/time_current"
+	          android:layout_alignParentRight="true"
+	          android:textColor="#6a6a6a"
+	          android:text="00:00"/>
+	      <LinearLayout 
+	          android:id="@+id/button"
+	          android:layout_height="wrap_content"
+	          android:layout_width="match_parent"
+	          android:layout_below="@id/time_current"
+	          android:orientation="horizontal"
+	          android:layout_marginTop="10dp">
+	          <RelativeLayout
+	              android:id="@+id/left"
+	              android:layout_height="wrap_content"
+	          	  android:layout_width="match_parent"
+	          	  android:layout_weight="1">
+	            <ImageButton
+		    		android:id="@+id/voice"
+		    		android:layout_height="40dp"
+		    		android:layout_width="40dp"
+		    		android:layout_alignParentRight="true"
+		    		android:layout_marginRight="5dp"
+		    		android:background="@drawable/voice_start"/>
+	            <TextView 
+	                android:layout_height="wrap_content"
+	                android:layout_width="wrap_content"
+	                android:text="录音"
+	                android:layout_toLeftOf="@id/voice"
+	                android:layout_marginRight="15sp"
+	                android:layout_alignBottom="@id/voice"/>
+	          </RelativeLayout>
+			  <RelativeLayout
+			      android:id="@+id/middle"
+	              android:layout_height="wrap_content"
+	          	  android:layout_width="match_parent"
+	          	  android:layout_weight="1">
+			  	<ImageButton 
+		    		android:id="@+id/play"
+		    		android:layout_height="40dp"
+		    		android:layout_width="40dp"
+		    		android:layout_alignParentRight="true"
+		    		android:layout_marginRight="5dp"
+		    		android:background="@drawable/play"/>
+			  	 <TextView 
+	                android:layout_height="wrap_content"
+	                android:layout_width="wrap_content"
+	                android:text="播放"
+	                android:layout_toLeftOf="@id/play"
+	                android:layout_marginRight="15sp"
+	                android:layout_alignBottom="@id/play"/>
+			  </RelativeLayout>
+			  	<RelativeLayout
+			      android:id="@+id/right"
+	              android:layout_height="wrap_content"
+	          	  android:layout_width="match_parent"
+	          	  android:layout_weight="1">
+			  	<ImageButton 
+		    		android:id="@+id/delete"
+		    		android:layout_height="40dp"
+		    		android:layout_width="40dp"
+		    		android:layout_alignParentRight="true"
+		    		android:layout_marginRight="5dp"
+		    		android:clickable="true"
+		    		android:background="@drawable/seekbar_delete"/>
+			  	 <TextView 
+			  	     android:id="@+id/deltet_word"
+	                android:layout_height="wrap_content"
+	                android:layout_width="wrap_content"
+	                android:text="删除"
+	                android:layout_toLeftOf="@id/delete"
+	                android:layout_marginRight="15sp"
+	                android:layout_alignBottom="@id/delete"/>
+			  </RelativeLayout>
+		
+	      </LinearLayout >
+		
+      </RelativeLayout>
+	     
+	 
+</RelativeLayout>

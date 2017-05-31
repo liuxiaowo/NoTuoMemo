@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaskActivity" >
+
+<!-- 列表头部 -->
+    <RelativeLayout
+    android:id="@+id/task_head"
+  	android:layout_width="match_parent"
+  	android:layout_height="45dp"
+  	android:background="#700C8485"
+  	android:layout_alignParentTop="true">
+  	
+   <!--返回按钮  -->
+  	<ImageButton
+  		android:id="@+id/task_back"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:src="@drawable/back"
+  		android:layout_centerVertical="true"
+  		android:layout_alignParentLeft="true"
+  		android:layout_marginLeft="5dp"
+  		android:background="#00000000"
+  	/>
+  <TextView 
+      android:layout_height="wrap_content"
+      android:layout_width="wrap_content"
+      android:text="no拖noDie任务单"
+      android:textColor="#ffffff"
+      android:textSize="25sp"
+      android:layout_centerInParent="true"/>
+  	<!--下拉菜单  -->
+  	<ImageButton
+  		android:id="@+id/task_down"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:src="@drawable/down"
+  		android:layout_centerVertical="true"
+  		android:layout_alignParentRight="true"
+  		android:background="#00000000"
+  	/>
+  	</RelativeLayout>
+
+  	<!-- 列表 -->
+    <ListView  
+        android:id="@+id/task_lv"  
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/task_head"
+        android:listSelector="#00000000"
+        />  
+   	
+
+</RelativeLayout>

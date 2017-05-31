@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  <!-- 顶部菜单栏 -->
+  <RelativeLayout
+     android:id="@+id/show_memo_top"
+	 android:layout_width="match_parent"
+  	 android:layout_height="45dp"
+  	 android:background="#700C8485"
+  	 android:layout_alignParentTop="true">
+  <!-- 返回上一级 -->
+  <ImageButton
+  		android:id="@+id/show_memo_back"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:src="@drawable/back"
+  		android:layout_marginLeft="5dp"
+  		android:layout_alignParentLeft="true"
+  		android:layout_centerVertical="true"
+ 		android:background="#00000000"
+  		/>
+    	<!-- 标题 -->
+		<TextView
+  			android:id="@+id/show_memo_title"
+  			android:layout_width="wrap_content"
+  			android:layout_height="wrap_content"
+  			android:text="标题"
+  			android:ems="8"
+			android:layout_centerInParent="true"
+			android:gravity="center"
+  			android:textColor="#ffffff"
+  			android:textSize="24sp"
+  		/>
+ <!--添加 -->
+ <ImageButton
+  		android:id="@+id/show_memo_add"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:layout_marginRight="5dp"
+  		android:src="@drawable/add"
+  		android:layout_centerVertical="true"
+  		android:layout_alignParentRight="true"
+  		android:background="#00000000"
+  		/>
+  </RelativeLayout>
+  <!-- 内容 -->
+  <RelativeLayout
+      android:id="@+id/show_memo_middle"
+  	  android:layout_width="match_parent"
+  	  android:layout_height="match_parent"
+  	  android:background="@drawable/show_context_background"
+  	  android:layout_below="@id/show_memo_top"
+      android:padding="10dp">
+  		<!-- 极简-时间显示文本框 -->
+  		<TextView
+  			android:id="@+id/show_memo_time"
+  			android:layout_width="match_parent"
+  			android:layout_height="wrap_content"
+  			android:text="00月00日    00时00分"	
+  			android:lines="1"
+  			android:layout_centerHorizontal="true"
+  			android:gravity="center_horizontal"
+  			android:maxLines="1"
+  			android:textColor="#050505"
+  			android:textSize="18sp"
+  			android:layout_marginTop="10dp"
+  		/>
+  		<!-- 时间分割线1 -->
+  		<View
+	     		android:id="@+id/show_memo_line1"
+ 		 		android:layout_width="match_parent"
+		 		android:layout_height="2dp"
+		 		android:background="#70ffffff"
+		 		android:layout_below="@id/show_memo_time"
+		 		android:layout_marginTop="8dp"/>
+		<!--内容显示文本框 -->
+  		<TextView
+  		    android:id="@+id/show_memo_content"
+  		    android:layout_width="match_parent"
+  		    android:layout_height="wrap_content"
+  		    android:layout_alignTop="@id/player"
+  		    android:layout_below="@id/show_memo_line1"
+  		    android:layout_marginTop="20sp"
+  		    android:text="正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文"
+  		    android:scrollbars="vertical"
+  		    android:textColor="#050505"
+  		    android:textSize="14sp" />
+  		
+  	 	<!-- 音频播放器效果 -->
+  	 	<RelativeLayout
+  	 		android:id="@+id/show_memo_player"
+	 		android:layout_width="match_parent"
+  	 		android:layout_height="wrap_content"
+  	 		android:layout_marginTop="10dp"
+  	 		android:layout_below="@id/show_memo_content"
+  	 		android:layout_centerHorizontal="true"
+  	 		android:padding="5dp"
+  	 		android:background="#60B6DECE">
+
+    		<!-- 
+        		max=100,代表它的取值范围是0-100,共101个值;
+        		progress=20,代表默认值是20
+        		progressDrawable,表示SeekBar的背景图片
+        		thumb,表示SeekBar的滑块图片  
+    		-->
+    		<SeekBar
+        		android:id="@+id/show_memo_seekbar"
+        		android:layout_width="255dp"  
+       			android:layout_height="wrap_content"
+       			android:layout_marginRight="5dp"
+        		android:max="100"
+        		android:progress="20"
+        		android:paddingLeft="8dp"
+        		android:paddingRight="4dp"
+        		android:maxHeight="2dip"
+        		android:minHeight="2dip"
+        		android:layout_alignParentTop="true"
+  	 			android:layout_alignParentLeft="true"
+  	 			android:secondaryProgress="100"
+        		android:thumb="@drawable/thumb"
+ 				android:progressDrawable="@drawable/seekbar"
+        		/> 
+        	<!-- 按钮-点击播放-->
+  	 		<ImageButton
+  	   		android:id="@+id/show_memo_play"
+  			android:layout_width="wrap_content"
+  	 		android:layout_height="wrap_content"
+  	 		android:background="@drawable/show_play"
+  	 		android:layout_marginLeft="10dp"
+  	 		android:layout_toLeftOf="@id/show_memo_seekbar"
+  	 		android:layout_alignParentRight="true"
+  	 		/>
+          <TextView 
+	          android:id="@+id/show_memo_time_current"
+	          android:layout_height="wrap_content"
+	          android:layout_width="wrap_content"
+	          android:layout_below="@id/show_memo_seekbar"
+	          android:layout_marginTop="5dp"
+	          android:layout_alignLeft="@id/show_memo_seekbar"
+	          android:textColor="#6a6a6a"
+	          android:text="00:00"/>
+	      <TextView 
+	          android:id="@+id/show_memo_time_total"
+	          android:layout_height="wrap_content"
+	          android:layout_width="wrap_content"
+	          android:layout_alignTop="@id/show_memo_time_current"
+	          android:layout_alignRight="@id/show_memo_seekbar"
+	          android:textColor="#6a6a6a"
+	          android:text="00:00"/>
+
+  	 	</RelativeLayout>
+
+  	 		
+
+  		<!-- 图片显示 -->
+  <LinearLayout
+    android:id="@+id/show_photo"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp"
+    android:layout_below="@+id/show_memo_player">
+     <com.example.adapter.HorizontalListView   
+        android:id="@+id/show_listView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="5dp">
+     </com.example.adapter.HorizontalListView>
+</LinearLayout>
+
+  <!-- 时间分割线1 -->
+  		<View
+	     		android:id="@+id/show_memo_line2"
+ 		 		android:layout_width="match_parent"
+		 		android:layout_height="2dp"
+		 		android:background="#70ffffff"
+		 		android:layout_below="@id/show_photo"
+		 		android:layout_marginTop="8dp"/>
+  	 	<!-- 开始时间 -->
+  		<TextView
+  			android:id="@+id/show_memo_starttime"
+  			android:layout_width="match_parent"
+  			android:layout_height="wrap_content"
+  			android:text="00月00日    00时00分"	
+  			android:lines="1"
+  			android:layout_below="@id/show_memo_line2"
+  			android:maxLines="1"
+  			android:textColor="#050505"
+  			android:textSize="18sp"
+  			android:layout_marginTop="10dp"
+  		/>
+  		<!-- 结束时间 -->
+  		<TextView
+  			android:id="@+id/show_memo_endtime"
+  			android:layout_width="match_parent"
+  			android:layout_height="wrap_content"
+  			android:text="00月00日    00时00分"	
+  			android:lines="1"
+  			android:gravity="left"
+  			android:maxLines="1"
+  			android:layout_below="@id/show_memo_starttime"
+  			android:textColor="#050505"
+  			android:textSize="18sp"
+  			android:layout_marginTop="10dp"
+  		/>
+  		<TextView
+  			android:id="@+id/show_memo_remind"
+  			android:layout_width="match_parent"
+  			android:layout_height="wrap_content"
+  			android:lines="1"
+  			android:gravity="left"
+  			android:maxLines="1"
+  			android:layout_below="@id/show_memo_endtime"
+  			android:textColor="#050505"
+  			android:textSize="18sp"
+  			android:layout_marginTop="10dp"
+  		/>
+  		<TextView
+  			android:id="@+id/show_memo_ring"
+  			android:layout_width="match_parent"
+  			android:layout_height="wrap_content"
+  			android:lines="1"
+  			android:gravity="left"
+  			android:maxLines="1"
+  			android:layout_below="@id/show_memo_remind"
+  			android:textColor="#050505"
+  			android:textSize="18sp"
+  			android:layout_marginTop="10dp"
+  		/>
+  
+  	<LinearLayout
+  	    android:id="@+id/show_memo_bottom"
+  		android:layout_width="match_parent"
+  		android:layout_height="35dp"
+  		android:layout_marginTop="10dp"
+  		android:orientation="horizontal"
+  		android:layout_alignParentBottom="true"
+  		android:layout_marginBottom="5dp">
+		<!-- 前一个-按钮 -->
+		<RelativeLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1">
+  		<ImageButton
+  			android:id="@+id/above"
+  			android:layout_width="wrap_content"
+  			android:layout_height="wrap_content"
+  			android:background="@drawable/above"
+  			android:layout_centerInParent="true"
+  		/>
+		</RelativeLayout>
+		<!-- 修改按钮 -->
+		<RelativeLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1">
+  			<ImageButton
+  				android:id="@+id/change"
+  				android:layout_width="wrap_content"
+  				android:layout_height="wrap_content"
+  				android:background="@drawable/show_edit"
+  				android:layout_centerInParent="true"/>
+		</RelativeLayout>
+  		<!-- 删除按钮 -->
+  		<RelativeLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1">
+  		    <ImageButton
+  				android:id="@+id/dele"
+  				android:layout_width="wrap_content"
+  				android:layout_height="wrap_content"
+  				android:layout_centerInParent="true"
+ 				android:background="@drawable/show_dele"
+  		/>  		    
+  		</RelativeLayout>
+  		<!-- 后一个-按钮 -->
+  		<RelativeLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1">
+  		    <ImageButton
+  				android:id="@+id/next"
+  				android:layout_width="wrap_content"
+  				android:layout_height="wrap_content"
+  				android:background="@drawable/next"
+  				android:layout_centerInParent="true"
+  		/>
+  		</RelativeLayout>
+  		
+</LinearLayout>
+  	</RelativeLayout>
+  	
+  	
+
+ 
+  		
+</RelativeLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:background="#80ffffff">
+
+<!-- 顶层功能栏 -->
+<RelativeLayout
+    android:id="@+id/add_memo_top"
+	 android:layout_width="match_parent"
+  	 android:layout_height="45dp"
+  	 android:layout_alignParentTop="true"
+  	 android:background="#700C8485">
+  	 <!--主页按钮 -->
+  	 <ImageButton
+  	 		android:id="@+id/add_memo_tuo"
+  			android:layout_width="40dp"
+  	 		android:layout_height="40dp"
+  	 		android:layout_centerVertical="true"
+  	 		android:layout_alignParentLeft="true"
+  	 		android:layout_marginTop="3dp"
+  	 		android:layout_marginLeft="5dp"
+  	 		android:background="@drawable/tuo"/>
+
+  <!-- 备忘录&极简切换按钮 -->
+   <LinearLayout
+	 android:layout_width="wrap_content"
+  	 android:layout_height="45dp"
+  	 android:layout_alignParentTop="true"
+  	 android:orientation="horizontal"
+  	 android:layout_centerHorizontal="true">
+  	 <!-- 备忘录  暗 -->
+  	  <ImageButton
+  	  		android:id="@+id/add_memo_memo"
+  			android:layout_width="wrap_content"
+  	 		android:layout_height="wrap_content"
+  	 		android:src="@drawable/memo_dark"
+  	 		android:layout_weight="1"
+  	 		android:layout_gravity="center_vertical"
+  	 		android:background="#00000000"/>
+  	<!-- 极简  亮 -->
+	<ImageButton
+  	 	    android:id="@+id/add_memo_text"
+  	 	    android:layout_width="wrap_content"
+  	 	    android:layout_height="wrap_content"
+  	 	    android:layout_gravity="center_vertical"
+  	 	    android:layout_weight="1"
+  	 	    android:background="#00000000"
+  	 	    android:src="@drawable/minimalist_bright" />
+
+	</LinearLayout>
+	<!--下拉按钮  -->
+  	 <ImageButton
+  	   		android:id="@+id/add_memo_down"
+  			android:layout_width="wrap_content"
+  	 		android:layout_height="wrap_content"
+  	 		android:layout_marginRight="5dp"
+  	 		android:layout_marginTop="3dp"
+  	 		android:layout_centerVertical="true"
+  	 		android:layout_alignParentRight="true"
+  	 		android:background="@drawable/down"/>	 	
+</RelativeLayout>
+
+<!-- 中下部 -->
+<RelativeLayout
+    android:id="@+id/add_memo_below"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_below="@id/add_memo_top">
+    <!-- 底层功能按钮 -->
+<RelativeLayout
+    android:id="@+id/add_memo_bottom"
+	 android:layout_width="match_parent"
+  	 android:layout_height="wrap_content"
+  	 android:background="#700C8485"
+  	 android:layout_alignParentBottom="true">
+  	 
+  <RadioGroup
+        android:id="@+id/add_memo_nav_window"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="horizontal" >
+   <!-- 编辑按钮 -->
+   <RadioButton
+            android:id="@+id/add_memo_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+         	android:text="内容"
+         	android:textColor="#FFFFFF"
+         	android:gravity="center"
+            android:drawableTop="@drawable/edit_check"/>
+   <!-- 附件按钮 -->
+   <RadioButton
+           android:id="@+id/add_memo_accessory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="附件"
+            android:textColor="#FFFFFF"
+            android:drawableTop="@drawable/accessory"/>
+	<!-- 闹钟提醒按钮 -->
+    <RadioButton
+            android:id="@+id/add_memo_alarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="提醒"
+            android:textColor="#FFFFFF"
+            android:drawableTop="@drawable/alarm_clock" />
+    </RadioGroup>
+  	</RelativeLayout>
+	<android.support.v4.view.ViewPager
+        android:id="@+id/home_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/add_memo_bottom"/>
+</RelativeLayout>
+
+
+</RelativeLayout>

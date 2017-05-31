@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListTextActivity" >
+
+<!-- 列表头部 -->
+    <RelativeLayout
+    android:id="@+id/list_text_head"
+  	android:layout_width="match_parent"
+  	android:layout_height="45dp"
+  	android:background="#700C8485"
+  	android:layout_alignParentTop="true">
+  	
+   <!--返回按钮  -->
+  	<ImageButton
+  		android:id="@+id/list_text_back"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:src="@drawable/back"
+  		android:layout_centerVertical="true"
+  		android:layout_alignParentLeft="true"
+  		android:layout_marginLeft="5dp"
+  		android:background="#00000000"
+  	/>
+  	 <!-- 备忘录&极简切换按钮 -->
+   <LinearLayout
+       android:id="@+id/list_text_cut"
+	 android:layout_width="wrap_content"
+  	 android:layout_height="wrap_content"
+  	 android:orientation="horizontal"
+  	 android:layout_centerInParent="true">
+  	 <!-- 备忘录  亮 -->
+  	  <ImageButton
+  	  		android:id="@+id/list_text_memo"
+  			android:layout_width="wrap_content"
+  	 		android:layout_height="wrap_content"
+  	 		android:layout_weight="1"
+  	 		android:layout_gravity="center_vertical"
+  	 		android:background="@drawable/memo_bright"/>
+  	<!-- 极简  暗-->
+	<ImageButton
+  	 	    android:id="@+id/list_text_text"
+  	 	    android:layout_width="wrap_content"
+  	 	    android:layout_height="wrap_content"
+  	 	    android:layout_gravity="center_vertical"
+  	 	    android:layout_weight="1"
+  	 	    android:background="@drawable/minimalist_dark" />
+
+	</LinearLayout>
+	<TextView 
+	    android:id="@+id/list_text_title"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textColor="#ffffff"
+	    android:textSize="24sp"
+	    android:text="标星文件"
+	    android:layout_centerInParent="true"
+	    android:visibility="invisible"/>
+  	
+
+  	<!--下拉菜单  -->
+  	<ImageButton
+  		android:id="@+id/list_text_down"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:src="@drawable/down"
+  		android:layout_centerVertical="true"
+  		android:layout_alignParentRight="true"
+  		android:background="#00000000"
+  	/>
+  	</RelativeLayout>
+
+  	<!-- 列表 -->
+    <ListView  
+        android:id="@+id/list_text_lv"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:listSelector="#200C8485"
+        android:focusableInTouchMode="true"
+        android:layout_below="@id/list_text_head"/>  
+   	
+</RelativeLayout>

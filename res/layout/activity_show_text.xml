@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+   <!-- 顶部菜单栏 -->
+  <RelativeLayout
+     android:id="@+id/show_text_top"
+	 android:layout_width="match_parent"
+  	 android:layout_height="45dp"
+  	 android:background="#700C8485"
+  	 android:layout_alignParentTop="true">
+  <!-- 返回上一级 -->
+  <ImageButton
+  		android:id="@+id/show_text_back"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:background="@drawable/back"
+  		android:layout_marginLeft="5dp"
+  		android:layout_alignParentLeft="true"
+  		android:layout_centerVertical="true"
+  		/>
+    	<!-- 标题 -->
+		<TextView
+  			android:id="@+id/show_text_title"
+  			android:layout_width="wrap_content"
+  			android:layout_height="wrap_content"
+  			android:text="标题"
+  			android:ems="8"
+			android:layout_centerInParent="true"
+			android:gravity="center"
+  			android:textColor="#ffffff"
+  			android:textSize="24sp"
+  		/>
+ <!--添加 -->
+ <ImageButton
+  		android:id="@+id/show_text_add"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:layout_marginRight="5dp"
+  		android:background="@drawable/add"
+  		android:layout_centerVertical="true"
+  		android:layout_alignParentRight="true"
+  		/>
+  </RelativeLayout>
+  <!-- 内容 -->
+  <RelativeLayout
+      android:id="@+id/show_text_middle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/show_text_top"
+      android:background="@drawable/show_context_background"
+      android:padding="10dp" >
+
+  		<!-- 极简-时间显示文本框 -->
+  		<TextView
+  			android:id="@+id/show_text_time"
+  			android:layout_width="match_parent"
+  			android:layout_height="wrap_content"
+  			android:text="00月00日    00时00分"	
+  			android:lines="1"
+  			android:layout_centerHorizontal="true"
+  			android:gravity="center_horizontal"
+  			android:maxLines="1"
+  			android:textColor="#050505"
+  			android:textSize="18sp"
+  			android:layout_marginTop="10dp"
+  		/>
+  		<!-- 时间分割线1 -->
+  		<View
+	     		android:id="@+id/show_text_line1"
+ 		 		android:layout_width="match_parent"
+		 		android:layout_height="2dp"
+		 		android:background="#70ffffff"
+		 		android:layout_below="@id/show_text_time"
+		 		android:layout_marginTop="8dp"/>
+  	 		
+  		<!--内容显示文本框 -->
+  		<TextView
+  		    android:id="@+id/show_text_content"
+  		    android:layout_width="match_parent"
+  		    android:layout_height="wrap_content"
+  		    android:layout_below="@id/show_text_line1"
+  		    android:layout_marginBottom="40dp"
+  		    android:layout_marginTop="15dp"
+  		    android:scrollbars="vertical"
+  		    android:text="正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文"
+  		    android:textColor="#050505"
+  		    android:textSize="20sp" />
+  		
+  		  <LinearLayout
+  		    android:id="@+id/show_text_bottom"
+  		    android:layout_width="match_parent"
+  		    android:layout_height="35dp"
+  		    android:layout_alignParentBottom="true"
+  		    android:layout_marginTop="10dp"
+  		    android:layout_marginBottom="10dp"
+  		    android:orientation="horizontal" >
+
+  		    <RelativeLayout
+  		        android:layout_width="match_parent"
+  		        android:layout_height="wrap_content"
+  		        android:layout_weight="1" >
+
+  		        <ImageButton
+  		            android:id="@+id/text_above"
+  		            android:layout_width="wrap_content"
+  		            android:layout_height="wrap_content"
+  		            android:layout_centerInParent="true"
+  		            android:background="@drawable/above" />
+  		    </RelativeLayout>
+
+  		    <RelativeLayout
+  		        android:layout_width="match_parent"
+  		        android:layout_height="wrap_content"
+  		        android:layout_weight="1" >
+
+  		        <ImageButton
+  		            android:id="@+id/text_change"
+  		            android:layout_width="wrap_content"
+  		            android:layout_height="wrap_content"
+  		            android:layout_centerInParent="true"
+  		            android:background="@drawable/show_edit" />
+  		    </RelativeLayout>
+
+  		    <RelativeLayout
+  		        android:layout_width="match_parent"
+  		        android:layout_height="wrap_content"
+  		        android:layout_weight="1" >
+
+  		        <ImageButton
+  		            android:id="@+id/text_dele"
+  		            android:layout_width="wrap_content"
+  		            android:layout_height="wrap_content"
+  		            android:layout_centerInParent="true"
+  		            android:background="@drawable/show_dele" />
+  		    </RelativeLayout>
+
+  		    <RelativeLayout
+  		        android:layout_width="match_parent"
+  		        android:layout_height="wrap_content"
+  		        android:layout_weight="1" >
+
+  		        <ImageButton
+  		            android:id="@+id/text_next"
+  		            android:layout_width="wrap_content"
+  		            android:layout_height="wrap_content"
+  		            android:layout_centerInParent="true"
+  		            android:background="@drawable/next_latest" />
+  		    </RelativeLayout>
+  		</LinearLayout>
+		</RelativeLayout>
+
+</RelativeLayout>
+

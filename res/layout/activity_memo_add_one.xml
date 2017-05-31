@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MemoAddOneActivity">
+    <!-- 标题输入框 -->
+  <EditText
+  	 		android:id="@+id/title_inputbox"
+  	 		android:layout_width="match_parent"
+  	 		android:layout_height="wrap_content"
+  	 		android:padding="10dp"
+  	 		android:hint="请输入标题"
+  	 		android:lines="1"
+  	 		android:maxLines="2"
+  	 		android:textSize="24sp"
+  	 		android:background="@drawable/title_inputbox_background"
+  	 		android:gravity="center_horizontal"
+ 			/>
+ 	<!-- 内容输入框 -->
+ 	<EditText
+  	 		android:id="@+id/content_inputbox"
+  	 		android:layout_width="match_parent"
+  	 		android:layout_height="fill_parent"
+  	 		android:layout_below="@id/title_inputbox"
+  	 		android:padding="10dp"
+  	 		android:hint="请输入内容"
+  	 		android:scrollbars="vertical"
+  	 		android:gravity="top"
+  	 		android:background="@drawable/content_inputbox_background"
+ 			/>
+</RelativeLayout>

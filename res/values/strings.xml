@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">no拖noDie</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_add_text">AddTextActivity</string>
+    <string name="title_activity_list_memo">ListMemoActivity</string>
+    <string name="title_activity_list_text">ListTextActivity</string>
+    <string name="title_activity_memo_add_one">MemoAddOneActivity</string>
+    <string name="title_activity_memo_add_two">MemoAddTwoActivity</string>
+    <string name="title_activity_memo_add_three">MemoAddThreeActivity</string>
+    <string name="instruction_title">no拖功能</string>
+    <string name="instruction_word1">1.新建备忘录时，填写任务计划，打开“no拖功能”开关，设置好任务开始时间和结束时间。</string>
+    <string name="instruction_word2">2.任务开始时，手机自动开启强制锁屏，锁屏期间手机仅可以拨打电话。</string>
+    <string name="instruction_word3">3.点退出按钮只有一次退出锁屏的机会。</string>
+    <string name="instruction_word4">4.退出后，当退出时间小于任务时间1/3的时间内重新打开软件可继续完成任务，但不能再退出，慎入。</string>
+    <string name="instruction_word5">5.退出时间超过1/3后任务失败。</string>
+    <string name="instruction_word6">6.保持锁屏直到任务结束时间，则成功完成任务，获得一次抽奖机会。</string>
+    <string name="title_activity_instruction">InstructionActivity</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="title_activity_collect_shelf">CollectShelfActivity</string>
+    <string name="title_activity_finish_assigment">FinishAssigmentActivity</string>
+    <string name="title_activity_lock">LockActivity</string>
+    <string name="title_activity_reward">RewardActivity</string>
+    <string name="title_activity_task">TaskActivity</string>
+    <string name="title_activity_show_memo">ShowMemoActivity</string>
+    <string name="title_activity_show_text">ShowTextActivity</string>
+    <string name="title_activity_show_card">ShowCardActivity</string>
+    <string name="folder_all">所有图片</string>
+    <string name="preview">预览</string>
+    <string name="msg_no_camera">启动摄像头失败</string>
+    <string name="msg_amount_limit">超出最大限制</string>
+    <string name="select_mode">选择模式</string>
+    <string name="mode_single">单选</string>
+    <string name="mode_multi">多选</string>
+    <string name="max_select_amount">最大选择数量</string>
+    <string name="hint_default_amount">默认数量为9</string>
+    <string name="enable_camera">是否启用照相机</string>
+    <string name="enable">是</string>
+    <string name="disable">否</string>
+    <string name="go_select">图片选择</string>
+    <string name="title_activity_multi_image_selector">MultiImageSelectorActivity</string>
+    <string name="title_activity_pre_view">PreViewActivity</string>
+
+</resources>

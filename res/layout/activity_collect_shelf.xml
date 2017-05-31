@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CollectShelfActivity" >
+
+    <LinearLayout
+        android:id="@+id/collectshelf_head"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#700C8485" 
+            android:padding="5dp">
+   <!--返回按钮  -->
+  	<ImageButton
+  		android:id="@+id/collect_back"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:src="@drawable/back"
+  		android:layout_centerVertical="true"
+  		android:layout_alignParentLeft="true"
+  		android:layout_marginLeft="5dp"
+  		android:background="#00000000"
+  	/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:textSize="20sp"
+                android:text="收藏夹"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/collectshelf_reward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="#706BB6AE"
+                android:text="抽奖"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+
+        <GridView
+            android:id="@+id/collectshelf_cards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/collectshelf_reward"
+            android:horizontalSpacing="8dp"
+            android:numColumns="3"
+            android:padding="3dp"
+            android:verticalSpacing="8dp" >
+        </GridView>
+    </LinearLayout>
+
+</RelativeLayout>

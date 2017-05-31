@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/pop_delete_win"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        android:background="#90000000" >
+        
+    <!-- 列表下部 -->
+        <ImageButton
+            android:id="@+id/pop_delete_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:background="#00000000"
+            android:src="@drawable/delete" />
+
+        <CheckBox
+            android:id="@+id/pop_delete_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="#90ffffff"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:id="@+id/pop_delete_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/pop_delete_check"
+            android:layout_marginRight="5dp"
+            android:text="全选"
+            android:textColor="#ffffff"
+             android:textSize="28sp"/>
+    </RelativeLayout>
